@@ -549,14 +549,59 @@
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
-    .container { padding: 0 24px; }
-    section { padding: 72px 0; }
+    .container { padding: 0 16px; }
+    section { padding: 56px 0; }
     .pod-grid, .mission-grid, .burden-grid,
     .tech-grid, .partner-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .services-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: 1fr 1fr; }
-    .pod-badge { bottom: 16px; right: 16px; }
     .stats-row { flex-wrap: wrap; }
+
+    /* Fix all images on mobile */
+    img { max-width: 100%; height: auto; display: block; }
+    .pod-image, .mission-image, .burden-image, .tech-image, .partner-image { 
+      width: 100%; 
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .pod-image img, .mission-image img, .burden-image img, 
+    .tech-image img, .partner-image img { 
+      width: 100%; 
+      height: 220px; 
+      object-fit: cover; 
+    }
+
+    /* Fix pod badge on mobile */
+    .pod-badge {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      margin-top: 16px;
+      display: inline-block;
+      border-radius: 4px;
+    }
+
+    /* Fix body text width on mobile */
+    .body-text { max-width: 100%; }
+    
+    /* Fix section title on mobile */
+    .section-title { font-size: 1.8rem; }
+
+    /* Fix team grid on mobile */
+    .team-grid { grid-template-columns: 1fr; gap: 32px; }
+
+    /* Fix hero on mobile */
+    .hero-title { font-size: 2.4rem; }
+    .hero-subtitle { font-size: 0.95rem; }
+
+    /* Fix contact form on mobile */
+    .contact-form input, .contact-form textarea { font-size: 16px; }
+
+    /* Fix services card on mobile */
+    .service-card { padding: 28px 20px; }
+
+    /* Fix partner section on mobile */
+    #partner { padding: 72px 0; }
   }
 </style>
 </head>
